@@ -1,0 +1,107 @@
+html {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.float-left {
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.mobile-view {
+  display: none;
+}
+
+.desktop-view {
+  display: block;
+}
+
+/* ----desktop 1920px */
+.wrapper {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+header {
+  background: lightblue;
+}
+
+header h1 {
+  text-align: center;
+  background: orange;
+  font-size: 2rem;
+  height: 2em;
+  line-height: 2em;
+}
+
+header .header-description {
+  background: orange;
+  font-size: 1.4rem;
+  padding: 0 0.5em 0.5em;
+  text-align: center;
+}
+
+header nav {
+  font-size: 1rem;
+  height: 2em;
+  line-height: 2em;
+  background: rgb(191, 156, 33);
+}
+
+aside {
+  width: 30%;
+  height: 500px;
+  background-color: lightblue;
+}
+
+main {
+  width: 70%;
+  height: 500px;
+  background: rgb(21, 187, 162);
+}
+
+section {
+  height: 100px;
+  background-color: lightgrey;
+}
+
+footer {
+  height: 200px;
+  background-color: rgb(166, 195, 94);
+}
+
+/* ----MEDIA QUERIES */
+@media screen and (min-width: 328px) {
+  .header-description::after {
+    content: "This is the smartphone version";
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-description::after {
+    content: "This is the tablet version";
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-description::after {
+    content: "This is the desktop standard version";
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .header-description::after {
+    content: "This is the desktop HD version";
+  }
+}
