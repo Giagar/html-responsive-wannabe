@@ -71,3 +71,70 @@ img {
 .clear {
   clear: both;
 }
+
+/* ----MEDIA QUERIES */
+@media screen and (max-width: 420px) {
+
+  /* ----common */
+  * {
+    /* non ho messo il reset completo per non incasinare margini e padding già predefiniti */
+    box-sizing: border-box;
+  }
+
+  .row {
+    width: 100%;
+    padding: 5px 10px;
+  }
+
+  .row h1 {
+    font-size: 28px;
+    padding-bottom: 20px;
+  }
+
+  .row > div {
+    padding-bottom: 50px;
+  }
+
+  .row > div:last-child {
+    padding-bottom: 10px;
+  }
+
+  #steps .row, #why .row {
+    margin: 90px auto 0;
+  }
+
+  /* ----primo blocco: lezioni */
+  #lezioni .row {
+    margin: 30px auto 0;
+  }
+
+  #lezioni .row>.left,
+  #lezioni .row>.right {
+    width: 100%;
+  }
+
+  /* ----secondo blocco: steps */
+  #steps .row>.left,
+  #steps .row>.central,
+  #steps .row>.right {
+    width: 100%;
+  }
+
+  /* ----terzo blocco: why */
+  #why .row img, img {
+    height: 100px !important;
+    width: auto;
+  }
+
+  #why .row > .first,
+  #why .row > .second,
+  #why .row > .third {
+    margin-top: 50px;
+    padding-bottom: 0;
+  }
+
+  #why .row hr {
+    margin-top: 15px;
+    width: 70%;
+  }
+}
